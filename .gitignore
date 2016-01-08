@@ -7,3 +7,6 @@ __pycache__/
 
 # Emacs backup files
 *~
+
+# Sound files
+sounds/

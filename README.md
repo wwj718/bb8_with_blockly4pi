@@ -1,4 +1,7 @@
 # SpheroBB8-python
+
+[Youtube Video](https://youtu.be/1Rkq6M9SdCc)
+
 **Sphero's BB8 droid** 
 *The droid you've been looking for.*
 

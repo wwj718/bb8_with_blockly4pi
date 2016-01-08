@@ -1,13 +1,13 @@
-#!/usr/bin/python
-
-
-from bluepy import btle
+#!/usr/bin/env python
 # import bluetooth
-import sys
-import struct
-import time
 import operator
+import struct
+import sys
 import threading
+import time
+from bluepy import btle
+
+MAC_ADDR = 'EB:72:B0:40:92:AF'
 
 # These are the message response code that can be return by Sphero.
 MRSP = dict(
@@ -241,7 +241,7 @@ class Sphero(threading.Thread):
         self.target_name = target_name
         self.bt = None
         # Use "sudo hcitool lescan" to find BB8's MAC address input it at deviceAddress = 
-        self.deviceAddress = 'DF:79:DD:9C:B6:1D'
+        self.deviceAddress = MAC_ADDR
         self.shutdown = False
         self.is_connected = False
         self.mask_list = None
