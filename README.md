@@ -7,7 +7,7 @@ fork自[SpheroBB8-python](https://github.com/jjinking/SpheroBB8-python)
 
 blockly中直接generate为js代码，发送http请求操作BB8
 
-![](http://oav6fgfj1.bkt.clouddn.com/bb81c34aa17.png)
+![](https://raw.githubusercontent.com/wwj718/gif_bed/master/bb8.png)
 
 # SpheroBB8-python
 
