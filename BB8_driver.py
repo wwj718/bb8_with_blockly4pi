@@ -7,7 +7,8 @@ import threading
 import time
 from bluepy import btle
 
-MAC_ADDR = 'EB:72:B0:40:92:AF'
+#MAC_ADDR = 'EB:72:B0:40:92:AF'
+MAC_ADDR = 'DD:8E:F1:CA:B8:9F'
 
 # These are the message response code that can be return by Sphero.
 MRSP = dict(
@@ -240,7 +241,7 @@ class Sphero(threading.Thread):
         threading.Thread.__init__(self)
         self.target_name = target_name
         self.bt = None
-        # Use "sudo hcitool lescan" to find BB8's MAC address input it at deviceAddress = 
+        # Use "sudo hcitool lescan" to find BB8's MAC address input it at deviceAddress =
         self.deviceAddress = MAC_ADDR
         self.shutdown = False
         self.is_connected = False

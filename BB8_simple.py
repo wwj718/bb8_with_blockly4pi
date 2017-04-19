@@ -9,7 +9,7 @@ FASTEST = 255
 VERY_FAST = 210
 FAST = 160
 MEDIUM = 100
-SLOW = 50
+SLOW = 50 #50
 VERY_SLOW = 32
 SLOWEST = 8
 
@@ -19,8 +19,8 @@ class BB8Controller(object):
 
     def __init__(self):
         pygame.mixer.init()
-        pygame.mixer.music.load('sounds/connect.mp3')
-        pygame.mixer.music.play()
+        #pygame.mixer.music.load('sounds/connect.mp3')
+        #pygame.mixer.music.play()
 
         self.bb8 = BB8_driver.Sphero()
         self.bb8.connect()
@@ -28,7 +28,8 @@ class BB8Controller(object):
         time.sleep(2)
         self.flash_green(ntimes=2)
 
-    def flash_color(self, color=(255, 255, 255), ntimes=3):
+    #def flash_color(self, color=(255, 255, 255), ntimes=3):
+    def flash_color(self, ntimes=3,color=(255, 255, 255)): #color hex ok?
         """Flash light with given with 1 second intervals"""
 
         for _ in xrange(ntimes):
@@ -57,10 +58,10 @@ class BB8Controller(object):
     def turn_right(self):
         """Turn sphero right"""
 
-        pygame.mixer.music.load('sounds/turn.mp3')
-        pygame.mixer.music.play()
+        #pygame.mixer.music.load('sounds/turn.mp3')
+        #pygame.mixer.music.play()
         time.sleep(1)
-        
+
         for _ in xrange(5):
             self.bb8.roll(150, 90, 1, True)
             self.bb8.set_heading(90, True)
@@ -69,8 +70,8 @@ class BB8Controller(object):
     def turn_left(self):
         """Turn sphero left"""
 
-        pygame.mixer.music.load('sounds/turn.mp3')
-        pygame.mixer.music.play()
+        #pygame.mixer.music.load('sounds/turn.mp3')
+        #pygame.mixer.music.play()
         time.sleep(1)
 
         for _ in xrange(5):
@@ -78,11 +79,11 @@ class BB8Controller(object):
             self.bb8.set_heading(270, True)
             time.sleep(.1)
 
-    def displace(self, speed, direction, duration):
+    def displace(self, speed, direction, duration=1.5):
         """Move and stop"""
 
-        pygame.mixer.music.load('sounds/roll.mp3')
-        pygame.mixer.music.play()
+        #pygame.mixer.music.load('sounds/roll.mp3')
+        #pygame.mixer.music.play()
 
         self.bb8.roll(speed, direction, 1, True)
         time.sleep(duration)
@@ -117,8 +118,8 @@ class BB8Controller(object):
 
     def disconnect(self):
         """Disconnect from BB-8"""
-        pygame.mixer.music.load('sounds/disconnect.mp3')
-        pygame.mixer.music.play()
+        #pygame.mixer.music.load('sounds/disconnect.mp3')
+        #pygame.mixer.music.play()
 
         self.bb8.disconnect()
         time.sleep(2)

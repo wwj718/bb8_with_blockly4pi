@@ -1,3 +1,14 @@
+# 说明
+fork自[SpheroBB8-python](https://github.com/jjinking/SpheroBB8-python)
+
+为其加上web api，使其可以被blockly以及微信控制
+
+这部分的通信原理可以参考我之前的项目:[wechat_bot](https://github.com/wwj718/wechat_bot/blob/master/wechat_bot.py)、[raspberrypi_api](https://github.com/wwj718/raspberrypi_api)
+
+blockly中直接generate为js代码，发送http请求操作BB8
+
+![](http://oav6fgfj1.bkt.clouddn.com/bb81c34aa17.png)
+
 # SpheroBB8-python
 
 [Youtube Video](https://youtu.be/1Rkq6M9SdCc)
