@@ -9,6 +9,8 @@ blockly中直接generate为js代码，发送http请求操作BB8
 
 ![](https://raw.githubusercontent.com/wwj718/gif_bed/master/bb8.png)
 
+注意:蓝牙连接的时候可能需要先使用命令行连接，然后断开，再启动脚本
+
 # SpheroBB8-python
 
 [Youtube Video](https://youtu.be/1Rkq6M9SdCc)

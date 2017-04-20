@@ -61,13 +61,14 @@ app = Bottle()
 @app.route('/bb8')
 def bb8():
     action = request.query.action #如果不存在为''
-    action_arg1 = int(request.query.arg1)#int
+    action_arg1 = request.query.arg1#int
     action_arg2 = request.query.arg2
     if action:
         bb8_action = action_map.get(action)
         if bb8_action:
                 #action_arg2 是#xxxxxx 十六进制的数
             if action_arg1:
+                action_arg1 = int(action_arg1)
                 if action_arg2:
                     if  action == "flash_color": #http://192.168.0.118:8000/bb8?action=flash_color&arg1=2&arg2=#ff0000
                         action_arg2 = hex2rgb(action_arg2)
