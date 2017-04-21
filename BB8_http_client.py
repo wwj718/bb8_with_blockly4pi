@@ -3,12 +3,16 @@
 
 #能发送http get请求就行
 import urllib
+#from tomorrow import threads
+
 class BB8HttpClient():
-  def __init__(self,ip='192.168.12.1',port=8000):
+  def __init__(self,ip='192.168.0.120',port=8000):
       self.ip=ip
       self.port=port
   #def post(self,action,arg1=0,arg2=0):
   #def post(self,action,arg1=None,arg2=None):
+
+  #@threads(5)
   def post(self,args):
     '''
     BB8_http_client.bb8_http_client("flash_blue",arg1=2)
@@ -19,7 +23,8 @@ class BB8HttpClient():
         print 'http://{}:{}/bb8?action={}'.format(self.ip,self.port,action)
         return urllib.urlopen('http://{}:{}/bb8?action={}'.format(self.ip,self.port,action)).read()
     '''
-    return urllib.urlopen('http://{}:{}/bb8?{}'.format(self.ip,self.port,args)).read()
+    # 改为异步线程
+    urllib.urlopen('http://{}:{}/bb8?{}'.format(self.ip,self.port,args)).read()
 
 
 def main():
