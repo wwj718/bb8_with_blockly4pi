@@ -1,4 +1,4 @@
-# Library to provide some simple controller functions for BB-8
+红# Library to provide some simple controller functions for BB-8
 
 #import pygame
 import time
@@ -97,22 +97,22 @@ class BB8Controller(object):
         time.sleep(.5)
         self.bb8.join()
 
-    def go_forward(self, speed=SLOW, duration=1.5):
+    def go_forward(self, speed=MEDIUM, duration=1.5):
         """Move forward"""
 
         self.displace(speed, 0, duration)
 
-    def go_back(self, speed=SLOW, duration=1.5):
+    def go_back(self, speed=MEDIUM, duration=1.5):
         """Move back"""
 
         self.displace(speed, 180, duration)
 
-    def go_right(self, speed=SLOW, duration=1.5):
+    def go_right(self, speed=MEDIUM, duration=1.5):
         """Move right"""
 
         self.displace(speed, 90, duration)
 
-    def go_left(self, speed=SLOW, duration=1.5):
+    def go_left(self, speed=MEDIUM, duration=1.5):
         """Move left"""
         self.displace(speed, 270, duration)
 

@@ -44,7 +44,6 @@ action_map["go_back"] = c.go_back
 action_map["go_right"] = c.go_right
 action_map["go_left"] = c.go_left
 
-#disconnect
 action_map["disconnect"] = c.disconnect
 
 # todo 微信 http 直接发送http请求
