@@ -1,6 +1,6 @@
 # Library to provide some simple controller functions for BB-8
 
-import pygame
+#import pygame
 import time
 import BB8_driver
 
@@ -18,7 +18,7 @@ class BB8Controller(object):
     """Simplified controller for BB-8"""
 
     def __init__(self):
-        pygame.mixer.init()
+        #pygame.mixer.init()
         #pygame.mixer.music.load('sounds/connect.mp3')
         #pygame.mixer.music.play()
 
